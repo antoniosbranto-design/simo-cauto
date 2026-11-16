@@ -1,0 +1,1 @@
+"use strict";const e=require("electron");e.contextBridge.exposeInMainWorld("simoVPN",{getStatus:()=>e.ipcRenderer.invoke("vpn:get-status"),selectConfig:()=>e.ipcRenderer.invoke("vpn:select-config"),connect:()=>e.ipcRenderer.invoke("vpn:connect"),disconnect:()=>e.ipcRenderer.invoke("vpn:disconnect")});
